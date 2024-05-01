@@ -1,32 +1,46 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
 
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { DataService } from './services/data.service';
-import { AboutComponent } from './components/about/about.component';
 
-const appRoutes: Routes = [
-  { path: '', component : UserComponent },
-  { path: 'about', component : AboutComponent },
-];
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
+import { TextMaskModule } from 'angular2-text-mask';
+
+import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
+
+
+import {NgxPopperjsModule} from 'ngx-popperjs';
+import { register } from 'swiper/element/bundle';
+
+register()
+import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserComponent,
-    AboutComponent
-  ],
+  declarations: [AppComponent],
+
+
+
   imports: [
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      closeButton: true,
+      progressBar: true,
+    }),
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
-    RouterModule.forRoot(appRoutes)
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    NgxPopperjsModule
   ],
-  providers: [DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
