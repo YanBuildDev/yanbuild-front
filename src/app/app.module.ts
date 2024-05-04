@@ -21,13 +21,16 @@ import { register } from 'swiper/element/bundle';
 
 register()
 import { ToastrModule } from 'ngx-toastr';
+import { MainComponent } from './components/main/main.component';
+import { QuoteFormComponent } from './components/quote-form/quote-form.component';
+import { RouterModule, provideRouter } from '@angular/router';
+import { routes } from './app.routes';
 
 @NgModule({
-  declarations: [AppComponent],
-
-
+  declarations: [AppComponent, MainComponent, QuoteFormComponent],
 
   imports: [
+    RouterModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       closeButton: true,
@@ -41,6 +44,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     NgxPopperjsModule
   ],
+  providers: [ provideRouter(routes),],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
