@@ -325,6 +325,41 @@ body {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .header {
+    height: 74px;
+  }
+  .burger-menu {
+    display: flex;
+    align-items: center;
+  }
+  .nav-item {
+    display: none;
+  }
+  .address-link {
+    font-size: 10px;
+  }
+  .list-address {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-svg-icon {
+    width: 62px;
+    height: 43px;
+  }
+  .btn-address {
+    display: none;
+  }
+  .list-address {
+    align-items: start;
+    margin-right: 26px;
+    gap: 10px;
+  }
+  .header-svg-icon {
+    margin-right: 26px;
+  }
+}
+
 /* HERO */
 
 .hero {
@@ -516,6 +551,51 @@ body {
     font-size: 12px;
   }
   .svg-hero {
+    padding: 12.5px 12.5px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .hero {
+    height: 500px;
+  }
+  .section-hero {
+    margin: 0 auto;
+  }
+  .hero-text {
+    font-size: 32px;
+    width: 286px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .btn-hero {
+    display: flex;
+    margin: 0 auto;
+    width: 286px;
+    padding: 12px 14.875px;
+  }
+  .footer-hero {
+    padding: 0 8px;
+    margin-top: 60px;
+    height: 117px;
+  }
+  .list-hero {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .num-svg-icon-item {
+    font-size: 14px;
+  }
+  .text-svg {
+    font-size: 10px;
+  }
+  .svg-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12.5px 12.5px;
   }
 }
@@ -934,9 +1014,94 @@ body {
   }
 }
 
-@media screen and (min-width: 393px) and (max-width: 800px) {
+@media screen and (min-width: 320px) and (max-width: 800px) {
   .project-gallery-section {
     display: none;
+  }
+  .mobile-gallery {
+    padding: 0 8px;
+  }
+
+  .mobile-gallery-img img {
+    width: 144px;
+    height: 144px;
+  }
+
+  .mobile-project-gallery-list-inst-yan {
+    margin-top: 100px;
+    display: flex;
+    justify-content: start;
+  }
+
+  .mobile-gallery-title {
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: "Neue Machina";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 6px;
+  }
+
+  .mobile-gallery-text {
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+  .mobile-gallery-p {
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 16px;
+    width: 292px;
+  }
+
+  .mobile-gallery-img {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .mobile-gallery-p-img {
+    color: #000;
+    color: color(display-p3 0 0 0);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 132px;
+  }
+
+  .mobile-gallery-btn {
+    color: var(--white, #fff);
+    color: var(--white, color(display-p3 1 1 1));
+    font-family: "Neue Machina";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    display: flex;
+    width: 143px;
+    padding: 12px 14.875px;
+    justify-content: center;
+    align-items: center;
+    gap: 6.25px;
+    border-radius: 1.25px;
+    background: #ff8300;
+    background: color(display-p3 0.9373 0.5412 0.1294);
+    margin-top: -60px;
   }
 }
 
@@ -1216,6 +1381,75 @@ body {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .services-we-provide-section {
+    margin-top: 56px;
+  }
+  .services-we-provide {
+    padding: 0 8px;
+    justify-content: start;
+    align-items: start;
+  }
+  .title-text-services-we-provide {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+  .title-services-we-provide {
+    width: 250px;
+    font-size: 30px;
+    text-align: left;
+  }
+  .text-services-we-provide {
+    width: 180px;
+    font-size: 12px;
+    text-align: left;
+    margin-top: -30px;
+    margin-left: 126px;
+  }
+  .services-we-provide-list-svg-icon {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .list-svg-icon {
+    gap: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-list-svg-icon {
+    margin-left: 0;
+  }
+  .title-list-svg-icon {
+    font-size: 26px;
+  }
+  .text-list-svg-icon {
+    font-size: 14px;
+  }
+  .list-text-svg-icon {
+    gap: 8px;
+  }
+  .line-services-we-provide {
+    margin-top: 34px;
+    width: 100%;
+  }
+  .buttons-services-we-provide {
+    margin: 0 auto;
+    gap: 14px;
+    margin-top: 34px;
+  }
+  .button-services-we-provide-get {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .button-services-we-provide-contact {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
 /* OUR GOAL */
 
 .section-our-goal {
@@ -1281,6 +1515,19 @@ body {
   .text-our-goal {
     font-size: 14px;
     width: 361px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .section-our-goal {
+    margin-top: 80px;
+  }
+  .title-our-goal {
+    font-size: 32px;
+  }
+  .text-our-goal {
+    font-size: 14px;
+    width: 290px;
   }
 }
 
@@ -1484,6 +1731,45 @@ body {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .why-would-you-choose-us-section {
+    margin-top: 50px;
+  }
+  .why-would-you-choose-us {
+    padding: 0 8px;
+  }
+  .title-why-would-you-choose-us {
+    font-size: 32px;
+    width: 290px;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+  .text-why-would-you-choose-us {
+    max-width: 290px;
+    font-size: 12px;
+  }
+  .text-why-would-you-choose-us,
+  .text-list-why-would-you-choose-us {
+    font-size: 15.5px;
+  }
+  .list-why-would-you-choose-us {
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 50px;
+  }
+  .text-why-would-you-choose-us {
+    font-size: 14px;
+    width: 361px;
+  }
+
+  .line-why-would-you-choose-us {
+    width: 100%;
+    width: 304px;
+    margin-top: 56px;
+  }
+}
+
 /* LOOKING FOR A QUALITY RESULT */
 
 .looking-for-a-quality-result-section {
@@ -1614,6 +1900,34 @@ body {
   .text-looking-for-a-quality-result {
     font-size: 14px;
     width: 362px;
+  }
+  .looking-for-a-quality-result-btn {
+    margin-bottom: 65px;
+    font-size: 15px;
+    padding: 10px 55px;
+  }
+  .looking-for-a-quality-result-btn-div {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .looking-for-a-quality-result-section {
+    background: url("../../../assets/image/mobile-who-choose-yanbuild.png") 100% /
+      cover;
+    height: 519px;
+    flex-direction: column;
+    padding: 0 8px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  .title-looking-for-a-quality-result {
+    font-size: 36px;
+    padding-top: 30px;
+  }
+  .text-looking-for-a-quality-result {
+    font-size: 14px;
+    width: 100%;
   }
   .looking-for-a-quality-result-btn {
     margin-bottom: 65px;
@@ -1808,6 +2122,46 @@ body {
   }
 }
 
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .let’s-work-together-section {
+    padding: 0 8px;
+    margin: 0;
+    margin-top: 60px;
+  }
+  .let’s-work-together-container {
+    flex-direction: column;
+  }
+  .let’s-work-together-img {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .let’s-work-together-info {
+    margin: 0 auto;
+  }
+  .let’s-work-together-title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .let’s-work-together-text {
+    font-size: 14px;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+  .let’s-work-together-button {
+    margin-top: 36px;
+    width: 100%;
+    padding: 15px 10px;
+  }
+  .let’s-work-together-icon {
+    border-radius: 2px;
+    background: #000;
+    background: color(display-p3 0 0 0);
+    width: 100%;
+    padding: 15px 10px;
+    margin-top: -16px;
+  }
+}
+
 /* REQUEST A FREE ESTIMATE QUOTE TODAY */
 
 .request-a-free-quote-section {
@@ -1938,6 +2292,49 @@ body {
     display: flex;
     width: 172px;
     padding: 10px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .request-a-free-quote-section {
+    height: 430px;
+    margin-top: 50px;
+  }
+  .request-a-free-quote {
+    margin-top: 14px;
+    padding: 0 8px;
+  }
+  .title-request-a-free-quote {
+    font-size: 32px;
+    width: 100%;
+    margin-top: 24px;
+    text-align: center;
+  }
+  .text-request-a-free-quote {
+    width: 100%;
+    width: 304px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .buttons-request-a-free-quote {
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .button-request-a-free-quote {
+    color: var(--white, #fff);
+    color: var(--white, color(display-p3 1 1 1));
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 50px;
+    text-transform: capitalize;
+    display: flex;
+    width: 132px;
+    padding: 10px 14px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -2243,6 +2640,73 @@ body {
     line-height: normal;
     display: flex;
     width: 361px;
+    padding: 16px 21.875px;
+    justify-content: center;
+    align-items: center;
+    gap: 6.25px;
+    border-radius: 1.25px;
+    background: #ff8300;
+    background: color(display-p3 0.9373 0.5412 0.1294);
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 392px) {
+  .footer-section {
+    height: 650px;
+  }
+  .footer {
+    margin: 0 auto;
+    padding: 0 8px;
+  }
+  .main-list-footer {
+    margin: 0 auto;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-title-navigation {
+    margin-top: 35px;
+    margin-bottom: 0px;
+  }
+  .footer-info-button-revy {
+    display: none;
+  }
+  .footer-svg-icon-list-number-phone-email,
+  .footer-navigation-list,
+  .footer-list-our-services {
+    margin-right: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer-title-list-our-services {
+    margin-top: 34px;
+  }
+  .footer-project-gallery-list-inst-yan {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+  .footer-btn-info-navigation-title {
+    display: none;
+  }
+  .footer-block-text-button {
+    margin-top: 0px;
+  }
+  .footer-info-text-revy {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+  .mobile-btn-footer {
+    color: var(--white, #fff);
+    color: var(--white, color(display-p3 1 1 1));
+    font-family: "Neue Machina";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    display: flex;
+    width: 300px;
     padding: 16px 21.875px;
     justify-content: center;
     align-items: center;
