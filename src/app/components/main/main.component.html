@@ -209,10 +209,10 @@
     </div>
   </section>
   <!-- GALLERY-MOBILE -->
-  <section *ngIf="isMobile" class="section-mobile-gallery" id="gallery">
+  <section *ngIf="isMobile" class="section-mobile-gallery">
     <div class="mobile-gallery">
       <div>
-        <ul class="mobile-project-gallery-list-inst-yan">
+        <ul id="gallery-mobile" class="mobile-project-gallery-list-inst-yan">
           <a
             class="footer-project-gallery-list-inst-yan"
             href="https://www.instagram.com/yanbuild/"
@@ -732,16 +732,16 @@
         <li class="list-modal-link">
           <a
             class="modal-item-link"
-            href="#gallery"
-            (click)="closeMenu('gallery')"
+            href="#gallery-mobile"
+            (click)="closeMenu('gallery-mobile')"
             >Projects</a
           >
         </li>
         <li class="list-modal-link">
           <a
             class="modal-item-link"
-            href="#gallery"
-            (click)="closeMenu('gallery')"
+            href="#gallery-mobile"
+            (click)="closeMenu('gallery-mobile')"
             >Gallery</a
           >
         </li>
