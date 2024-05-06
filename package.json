@@ -24,6 +24,8 @@
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@maskito/angular": "^2.3.1",
+    "@maskito/core": "^2.3.1",
     "angular2-text-mask": "^9.0.0",
     "ngx-popperjs": "^15.0.4",
     "ngx-qrcode-styling": "^1.2.3",

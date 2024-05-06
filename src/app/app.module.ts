@@ -15,6 +15,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { NgxQrcodeStylingModule } from 'ngx-qrcode-styling';
 
+import { MaskitoDirective } from '@maskito/angular'
 
 import {NgxPopperjsModule} from 'ngx-popperjs';
 import { register } from 'swiper/element/bundle';
@@ -25,7 +26,9 @@ import { MainComponent } from '../app/components/main/main.component';
 import { QuoteFormComponent } from './components/quote-form/quote-form.component';
 import { RouterModule, provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-
+import { AdminService } from './services/admin.service';
+import { ApiService } from './services/api.service';
+import { OrderService } from './services/orders.service';
 @NgModule({
   declarations: [AppComponent, MainComponent, QuoteFormComponent],
 
@@ -42,9 +45,10 @@ import { routes } from './app.routes';
     HttpClientModule,
     MatNativeDateModule,
     ReactiveFormsModule,
-    NgxPopperjsModule
+    NgxPopperjsModule,
+    MaskitoDirective
   ],
-  providers: [ provideRouter(routes),],
+  providers: [ provideRouter(routes), ApiService, AdminService, OrderService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
