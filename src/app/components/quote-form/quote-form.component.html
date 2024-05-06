@@ -9,10 +9,10 @@
           <input class="input-form" type="text" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName" />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="formData.phoneNumber"  />
+          <input class="input-form" type="text" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="formData.phone"  />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Zip Code" name="zipCode" [(ngModel)]="formData.zipCode"  />
+          <input class="input-form" type="text" placeholder="Zip Code" name="zipCode" [(ngModel)]="formData.zip"  />
         </li>
         <li class="input-list">
           <input class="input-form" type="text" placeholder="State" name="state" [(ngModel)]="formData.state"  />
@@ -36,24 +36,24 @@
     <p class="text-checkbox">What kind of project is this?</p>
     <ul class="list-checkbox first-checkebox">
       <ul class="list-checkbox-item">
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="residentialTile" [(ngModel)]="formData.residentialTile"  /> Residential Tile
+        <li (click)="addKind('Residential Tile Installation')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="residentialTile" [checked]="this.formData.contactMethods.includes('Residential Tile Installation')"  /> Residential Tile
           Installation
         </li>
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="showerPanWork" [(ngModel)]="formData.showerPanWork"  /> Shower Pan Work
+        <li (click)="addKind('Shower Pan Work')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="showerPanWork" [checked]="this.formData.contactMethods.includes('Shower Pan Work')" /> Shower Pan Work
         </li>
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="floorLeveling" [(ngModel)]="formData.floorLeveling"  /> Floor leveling
+        <li (click)="addKind('Floor leveling')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="floorLeveling" [checked]="this.formData.contactMethods.includes('Floor leveling')" /> Floor leveling
         </li>
       </ul>
       <ul class="list-checkbox-item">
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="commercialTile" [(ngModel)]="formData.commercialTile"  /> Commercial Tile
+        <li (click)="addKind('Commercial Tile Installation')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="commercialTile" [checked]="this.formData.contactMethods.includes('Commercial Tile Installation')" /> Commercial Tile
           Installation
         </li>
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="tileRepair" [(ngModel)]="formData.tileRepair"  /> Tile Repair
+        <li (click)="addKind('Tile Repair')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="tileRepair" [checked]="this.formData.contactMethods.includes('Tile Repair')" /> Tile Repair
         </li>
       </ul>
     </ul>
@@ -76,14 +76,14 @@
         <p class="text-checkbox text-checkbox-item">
           Do you need in-home measurements?
         </p>
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="yesInstallation" [(ngModel)]="formData.yesInstallation"  /> Yes Installation
+        <li (click)="this.formData.homeMeasurements = 'Yes'" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="yesInstallation" [checked]="this.formData.homeMeasurements === 'Yes'"  /> Yes Installation
         </li>
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="no" [(ngModel)]="formData.no"  /> No
+        <li (click)="this.formData.homeMeasurements = 'No'" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="no" [checked]="this.formData.homeMeasurements === 'No'"  /> No
         </li>
-        <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="notSureYet" [(ngModel)]="formData.notSureYet"  /> Not Sure Yet
+        <li (click)="this.formData.homeMeasurements = 'Not Sure Yet'" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="notSureYet" [checked]="this.formData.homeMeasurements === 'Not Sure Yet'"  /> Not Sure Yet
         </li>
       </ul>
     </ul>
@@ -108,7 +108,7 @@
           type="text"
           placeholder="When is the best time to contact you?"
 			 name="whenIsTheBestTimeToContactYou"
-			 [(ngModel)]="formData.whenIsTheBestTimeToContactYou" 
+			 [(ngModel)]="formData.contactTime" 
         />
       </li>
       <li>
@@ -117,7 +117,7 @@
           type="text"
           placeholder="How did you hear about us?"
 			 name="howDidYouHearAboutUs"
-			 [(ngModel)]="formData.howDidYouHearAboutUs" 
+			 [(ngModel)]="formData.hearAboutUs" 
         />
       </li>
       <li>
@@ -126,7 +126,7 @@
           placeholder="Tell us about your project"
           autocomplete="off"
 			 name="tellUsAboutYourProject"
-			 [(ngModel)]="formData.tellUsAboutYourProject" 
+			 [(ngModel)]="formData.projectDesc" 
         ></textarea>
       </li>
       <li>

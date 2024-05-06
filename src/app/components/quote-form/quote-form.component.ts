@@ -9,46 +9,39 @@ export class QuoteFormComponent {
    formData = {
       firstName: '',
       lastName: '',
-      phoneNumber: '',
-      zipCode: '',
-      state: '',
-      
+      phone: '',
       email: '',
+      zip: '',
       city: '',
+      state: '',
       companyName: '',
-      residentialTile: '',
-      showerPanWork: '',
-      floorLeveling: '',
-      commercialTile: '',
-      tileRepair: '',
-      immediately: '',
-      months3_6: '',
-      months6: '',
-      yesInstallation: '',
-      no: '',
-      notSureYet: '',
-      phoneCall: '',
-      text: '',
-      emailCheck: '',
-      whenIsTheBestTimeToContactYou: '',
-      howDidYouHearAboutUs: '',
-      tellUsAboutYourProject : '',
-      // //////////////////////
-      projectPlanning: '',
-      contactMethods: [
-
+      projectKind: [
       ],
+      projectPlanning: '',
+      homeMeasurements: '',
+      contactMethods: [
+      ],
+      contactTime: '',
+      hearAboutUs: '',
+      projectDesc: '',
    }
 
-
+   addKind(event){
+      if(this.formData.projectKind.includes(event)){
+         this.formData.projectKind = this.formData.projectKind.filter(kind => kind !== event);
+      }else{
+         this.formData.projectKind.push(event);
+      }
+   }
    addMethod(event){
       if(this.formData.contactMethods.includes(event)){
          this.formData.contactMethods = this.formData.contactMethods.filter(method => method !== event);
       }else{
          this.formData.contactMethods.push(event);
       }
+      
    }
   onSubmit() {
-
+   console.log(this.formData);
   }
 }
