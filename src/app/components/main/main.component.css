@@ -565,7 +565,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 120px;
+    gap: 20px;
     margin: 0 auto;
     height: 100%;
   }
