@@ -1,101 +1,113 @@
-<!-- HEADER -->
-<header class="header" id="header">
-  <div class="container header-item">
-    <img
-      class="header-svg-icon"
-      src="../../../assets/logo-yanbild.png"
-      alt=""
-    />
-    <!-- NAV -->
-    <nav class="nav-item">
-      <ul class="list">
-        <li class="list-item"><a class="link-item" href="#">Home</a></li>
-        <li class="list-item">
-          <a class="link-item" href="#">Projects</a>
+<div class="header-hero-container">
+  <div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header-item">
+        <img
+          class="header-svg-icon"
+          src="../../../assets/logo-yanbild.png"
+          alt=""
+        />
+        <!-- NAV -->
+        <nav class="nav-item">
+          <ul class="list">
+            <li class="list-item"><a class="link-item" href="#">Home</a></li>
+            <li class="list-item">
+              <a class="link-item" href="#">Projects</a>
+            </li>
+            <li class="list-item">
+              <a class="link-item" href="#">Gallery</a>
+            </li>
+            <li class="list-item">
+              <a class="link-item" href="#">Services</a>
+            </li>
+            <li class="list-item">
+              <a class="link-item" href="#">Why Us</a>
+            </li>
+            <li class="list-item">
+              <a class="link-item" href="#">Write a Review</a>
+            </li>
+            <li class="list-item">
+              <button class="btn-header">Get a Quote</button>
+            </li>
+          </ul>
+        </nav>
+        <!-- ADDRESS -->
+        <address class="address">
+          <ul class="list-address">
+            <li class="list-address-link">
+              <svg width="20" height="20">
+                <use
+                  href="../../../assets/svg/icon.svg#icon-oclock-header"
+                ></use>
+              </svg>
+              <a class="address-link" href="#">Mon - Fri: 8AM - 5PM </a>
+            </li>
+            <li class="list-address-link">
+              <svg width="20" height="20">
+                <use
+                  href="../../../assets/svg/icon.svg#icon-phone-header"
+                ></use>
+              </svg>
+              <a class="address-link address-link-phone" href="tel:+13607027163"
+                >+ 1360 702 7163</a
+              >
+            </li>
+          </ul>
+          <button class="btn-address">Contact Us</button>
+        </address>
+        <div (click)="openMenu()" class="burger-menu">
+          <svg width="40" height="40">
+            <use href="../../../assets/svg/icon.svg#icon-burger-menu"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div lass="hero-container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="section-hero">
+        <p class="hero-text">
+          We are the best specialists in <br />
+          our field. You will become our <br />
+          friends
+        </p>
+        <button class="btn-hero">Get a quote</button>
+      </div>
+    </section>
+  </div>
+  <div>
+    <div class="footer-hero">
+      <ul class="list-hero">
+        <li class="hero-list-item">
+          <div class="svg-hero">
+            <svg class="svg-hero-house" width="20px" height="20px">
+              <use href="../../../assets/svg/icon.svg#icon-house-svg"></use>
+            </svg>
+          </div>
+          <div class="text-svg-icon">
+            <p class="num-svg-icon-item">4</p>
+            <p class="text-svg">girth and completion of 4 houses per month</p>
+          </div>
         </li>
-        <li class="list-item">
-          <a class="link-item" href="#">Gallery</a>
-        </li>
-        <li class="list-item">
-          <a class="link-item" href="#">Services</a>
-        </li>
-        <li class="list-item">
-          <a class="link-item" href="#">Why Us</a>
-        </li>
-        <li class="list-item">
-          <a class="link-item" href="#">Write a Review</a>
-        </li>
-        <li class="list-item">
-          <button class="btn-header">Get a Quote</button>
+        <li class="hero-list-item">
+          <div class="svg-hero">
+            <svg class="svg-hero-check" width="20px" height="20px">
+              <use href="../../../assets/svg/icon.svg#icon-check-svg"></use>
+            </svg>
+          </div>
+          <div class="text-svg-icon">
+            <p class="num-svg-icon-item">5</p>
+            <p class="text-svg">BIG COMMERCIAL PROJECTS SIGNED</p>
+          </div>
         </li>
       </ul>
-    </nav>
-    <!-- ADDRESS -->
-    <address class="address">
-      <ul class="list-address">
-        <li class="list-address-link">
-          <svg width="20" height="20">
-            <use href="../../../assets/svg/icon.svg#icon-oclock-header"></use>
-          </svg>
-          <a class="address-link" href="#">Mon - Fri: 8AM - 5PM </a>
-        </li>
-        <li class="list-address-link">
-          <svg width="20" height="20">
-            <use href="../../../assets/svg/icon.svg#icon-phone-header"></use>
-          </svg>
-          <a class="address-link address-link-phone" href="tel:+13607027163"
-            >+ 1360 702 7163</a
-          >
-        </li>
-      </ul>
-      <button class="btn-address">Contact Us</button>
-    </address>
-    <div (click)="openMenu()" class="burger-menu">
-      <svg width="40" height="40">
-        <use href="../../../assets/svg/icon.svg#icon-burger-menu"></use>
-      </svg>
     </div>
   </div>
-</header>
+</div>
 <!-- MAIN -->
 <main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="section-hero">
-      <p class="hero-text">
-        We are the best specialists in <br />
-        our field. You will become our <br />
-        friends
-      </p>
-      <button class="btn-hero">Get a quote</button>
-      <div class="footer-hero">
-        <ul class="list-hero">
-          <li class="hero-list-item">
-            <div class="svg-hero">
-              <svg class="svg-hero-house" width="20px" height="20px">
-                <use href="../../../assets/svg/icon.svg#icon-house-svg"></use>
-              </svg>
-            </div>
-            <div class="text-svg-icon">
-              <p class="num-svg-icon-item">4</p>
-              <p class="text-svg">girth and completion of 4 houses per month</p>
-            </div>
-          </li>
-          <li class="hero-list-item">
-            <div class="svg-hero">
-              <svg class="svg-hero-check" width="20px" height="20px">
-                <use href="../../../assets/svg/icon.svg#icon-check-svg"></use>
-              </svg>
-            </div>
-            <div class="text-svg-icon">
-              <p class="num-svg-icon-item">5</p>
-              <p class="text-svg">BIG COMMERCIAL PROJECTS SIGNED</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
   <!-- PROJECT GALLERY -->
   <section class="project-gallery-section">
     <div class="project-section">
@@ -332,7 +344,7 @@
           </li>
           <li>
             <img
-				class="mobile-img-last"
+              class="mobile-img-last"
               src="../../../assets/gallery/gallery13.png"
               alt=""
               width="173px"

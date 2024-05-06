@@ -89,9 +89,11 @@ body {
 
 /* MAIN */
 
-.wrapper {
-  margin: 0;
-  padding: 0;
+.header-hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 /* HEADER */
@@ -363,10 +365,9 @@ body {
 /* HERO */
 
 .hero {
-  margin-top: -1px;
-  background: url("../../../assets/image/man.png") lightgray 50% / cover
-    no-repeat;
-  height: 911px;
+  height: 100%;
+  background: url("../../../assets/image/man.png") lightgray 100% / cover
+    no-repeat fixed;
 }
 
 .hero-text {
@@ -378,7 +379,7 @@ body {
   font-weight: 800;
   line-height: normal;
   padding-left: 245px;
-  padding-top: 197px;
+  padding-top: 137px;
 }
 
 .btn-hero {
@@ -388,7 +389,7 @@ body {
   font-size: 25px;
   font-style: normal;
   font-weight: 800;
-  line-height: 50px; /* 200% */
+  line-height: 50px;
   text-transform: capitalize;
   display: inline-flex;
   padding: 10px 55px;
@@ -400,15 +401,16 @@ body {
   background: color(display-p3 0.9373 0.5412 0.1294);
   margin-left: 245px;
   margin-top: 50px;
+  margin-bottom: 137px;
 }
 
 .footer-hero {
   height: 100px;
   background-color: black;
-  margin-top: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
+  bottom: 0;
 }
 
 .list-hero {
@@ -455,17 +457,19 @@ body {
 
 @media screen and (min-width: 1440px) and (max-width: 1599px) {
   .hero-text {
-    font-size: 64px;
+    font-size: 62px;
+    padding-top: 1px;
+    padding-bottom: 30px;
     width: 1100px;
   }
   .btn-hero {
     padding: 10px 45px;
+    margin: 0;
+    margin-left: 240px;
+    margin-bottom: 40px;
   }
   .list-hero {
     gap: 154px;
-  }
-  .footer-hero {
-    margin-top: 170px;
   }
   .svg-hero {
     padding: 17px 17px;
@@ -479,21 +483,16 @@ body {
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
-  .hero {
-    height: 700px;
-  }
   .hero-text {
     font-size: 45px;
-    padding: 130px;
+    padding-left: 130px;
+    padding-top: 100px;
   }
   .btn-hero {
     padding: 6.25px 34.375px;
     font-size: 15.625px;
     margin-top: 31px;
     margin-left: 130px;
-  }
-  .footer-hero {
-    margin-top: 120px;
   }
   .num-svg-icon-item {
     font-size: 15.625px;
@@ -515,9 +514,6 @@ body {
 }
 
 @media screen and (min-width: 393px) and (max-width: 799px) {
-  .hero {
-    height: 600px;
-  }
   .section-hero {
     margin: 0 auto;
   }
@@ -526,7 +522,7 @@ body {
     width: 361px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
   }
@@ -537,7 +533,6 @@ body {
     padding: 20px 21.875px;
   }
   .footer-hero {
-    margin-top: 90px;
     height: 117px;
   }
   .list-hero {
@@ -556,19 +551,23 @@ body {
 }
 
 @media screen and (min-width: 320px) and (max-width: 392px) {
-  .hero {
-    height: 500px;
+  .hero-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
   }
   .section-hero {
     margin: 0 auto;
+    height: 100%;
   }
   .hero-text {
     font-size: 32px;
     width: 286px;
     margin: 0 auto;
     padding: 0;
-    padding-top: 80px;
-    padding-bottom: 30px;
     text-align: center;
   }
   .btn-hero {
@@ -2107,7 +2106,7 @@ body {
     flex-direction: column;
   }
   .let’s-work-together-img-div {
-   display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
