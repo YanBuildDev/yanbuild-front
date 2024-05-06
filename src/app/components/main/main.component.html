@@ -28,7 +28,7 @@
               <a class="link-item" href="#reviews">Write a Review</a>
             </li>
             <li class="list-item">
-              <button class="btn-header">Get a Quote</button>
+              <button [routerLink]="['/quote-form']" class="btn-header">Get a Quote</button>
             </li>
           </ul>
         </nav>
@@ -54,7 +54,7 @@
               >
             </li>
           </ul>
-          <button class="btn-address">Contact Us</button>
+          <button [routerLink]="['/quote-form']" class="btn-address">Contact Us</button>
         </address>
         <div (click)="openMenu()" class="burger-menu">
           <svg width="40" height="40">
@@ -73,7 +73,7 @@
           our field. You will become our <br />
           friends
         </p>
-        <button class="btn-hero">Get a quote</button>
+        <button [routerLink]="['/quote-form']" class="btn-hero">Get a quote</button>
       </div>
     </section>
   </div>
@@ -202,7 +202,7 @@
               your premises. The YanBuild company guarantees you a good mood
               after working with our specialists.
             </p>
-            <button class="button-gallery-text">Get a quote</button>
+            <button [routerLink]="['/quote-form']" class="button-gallery-text">Get a quote</button>
           </div>
         </div>
       </div>
@@ -362,7 +362,7 @@
               after working with our specialists.
             </p>
           </li>
-          <li><button class="mobile-gallery-btn">Get a Quote</button></li>
+          <li><button [routerLink]="['/quote-form']" class="mobile-gallery-btn">Get a Quote</button></li>
         </ul>
       </div>
     </div>
@@ -448,10 +448,10 @@
       </div>
       <div class="line-services-we-provide"></div>
       <div class="buttons-services-we-provide">
-        <button class="button-services-we-provide-get">
+        <button [routerLink]="['/quote-form']" class="button-services-we-provide-get">
           Get Your Free Quote
         </button>
-        <button class="button-services-we-provide-contact">
+        <button [routerLink]="['/quote-form']" class="button-services-we-provide-contact">
           Contact Exprerts
         </button>
       </div>
@@ -570,7 +570,7 @@
       </p>
     </div>
     <div class="looking-for-a-quality-result-btn-div">
-      <button class="looking-for-a-quality-result-btn">START MY PROJECT</button>
+      <button [routerLink]="['/quote-form']" class="looking-for-a-quality-result-btn">START MY PROJECT</button>
     </div>
   </section>
   <!-- LET’S WORK TOGETHER -->
@@ -598,12 +598,12 @@
             reconstruction, our team is ready to bring your ideas and wishes to
             life.
           </p>
-          <button class="let’s-work-together-button">View Services</button>
+          <button [routerLink]="['/quote-form']" class="let’s-work-together-button">View Services</button>
         </div>
       </div>
       <div class="line-let’s-work-together"></div>
       <div class="let’s-work-together-btn">
-        <button class="let’s-work-together-icon">
+        <button  class="let’s-work-together-icon">
           <svg width="28px" height="28px">
             <use href="../../../assets/svg/icon.svg#icon-google"></use>
           </svg>
@@ -626,8 +626,8 @@
         life.
       </p>
       <div class="buttons-request-a-free-quote">
-        <button class="button-request-a-free-quote">Get a quote</button>
-        <button class="button-request-a-free-quote">Contact Us</button>
+        <button [routerLink]="['/quote-form']" class="button-request-a-free-quote">Get a quote</button>
+        <button [routerLink]="['/quote-form']" class="button-request-a-free-quote">Contact Us</button>
       </div>
     </div>
   </section>
