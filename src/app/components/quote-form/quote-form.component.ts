@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 export class QuoteFormComponent {
    formData = {
       firstName: '',
+      lastName: '',
       phoneNumber: '',
       zipCode: '',
       state: '',
-      latsName: '',
+      
       email: '',
       city: '',
       companyName: '',

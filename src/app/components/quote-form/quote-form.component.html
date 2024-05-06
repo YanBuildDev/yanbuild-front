@@ -3,7 +3,7 @@
 <form (ngSubmit)="onSubmit()" action="" class="form">
   <div class="form-container">
     <p class="text-form">Please Fill out this form to get started.</p>
-    <ul class="list-form">
+    <div class="list-form">
       <ul class="list-form-item">
         <li class="input-list">
           <input class="input-form" type="text" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName" />
@@ -20,7 +20,7 @@
       </ul>
       <ul class="list-form-item">
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Lats Name" name="latsName" [(ngModel)]="formData.latsName"  />
+          <input class="input-form" type="text" placeholder="Last Name" name="lastName" [(ngModel)]="formData.lastName"  />
         </li>
         <li class="input-list">
           <input class="input-form" type="email" placeholder="Email" name="email" [(ngModel)]="formData.email"  />
@@ -32,7 +32,7 @@
           <input class="input-form" type="text" placeholder="Company Name" name="companyName" [(ngModel)]="formData.companyName"  />
         </li>
       </ul>
-    </ul>
+    </div>
     <p class="text-checkbox">What kind of project is this?</p>
     <ul class="list-checkbox first-checkebox">
       <ul class="list-checkbox-item">
