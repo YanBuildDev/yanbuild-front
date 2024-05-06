@@ -41,4 +41,7 @@ title = 'app';
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
