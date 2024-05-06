@@ -2106,6 +2106,11 @@ body {
   .let’s-work-together-container {
     flex-direction: column;
   }
+  .let’s-work-together-img-div {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .let’s-work-together-img {
     width: 361px;
     height: 191px;
