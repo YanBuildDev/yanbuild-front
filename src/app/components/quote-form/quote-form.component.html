@@ -1,1 +1,217 @@
-<p>quote-form works!</p>
+<h2 class="title-form">GET A FREE QUOTE</h2>
+
+<form (ngSubmit)="onSubmit()" action="" class="form">
+  <div class="form-container">
+    <p class="text-form">Please Fill out this form to get started.</p>
+    <div class="list-form">
+      <ul class="list-form-item">
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName" />
+        </li>
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="formData.phone"  />
+        </li>
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="Zip Code" name="zipCode" [(ngModel)]="formData.zip"  />
+        </li>
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="State" name="state" [(ngModel)]="formData.state"  />
+        </li>
+      </ul>
+      <ul class="list-form-item">
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="Last Name" name="lastName" [(ngModel)]="formData.lastName"  />
+        </li>
+        <li class="input-list">
+          <input class="input-form" type="email" placeholder="Email" name="email" [(ngModel)]="formData.email"  />
+        </li>
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="City" name="city" [(ngModel)]="formData.city"  />
+        </li>
+        <li class="input-list">
+          <input class="input-form" type="text" placeholder="Company Name" name="companyName" [(ngModel)]="formData.companyName"  />
+        </li>
+      </ul>
+    </div>
+    <p class="text-checkbox">What kind of project is this?</p>
+    <ul class="list-checkbox first-checkebox">
+      <ul class="list-checkbox-item">
+        <li (click)="addKind('Residential Tile Installation')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="residentialTile" [checked]="this.formData.contactMethods.includes('Residential Tile Installation')"  /> Residential Tile
+          Installation
+        </li>
+        <li (click)="addKind('Shower Pan Work')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="showerPanWork" [checked]="this.formData.contactMethods.includes('Shower Pan Work')" /> Shower Pan Work
+        </li>
+        <li (click)="addKind('Floor leveling')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="floorLeveling" [checked]="this.formData.contactMethods.includes('Floor leveling')" /> Floor leveling
+        </li>
+      </ul>
+      <ul class="list-checkbox-item">
+        <li (click)="addKind('Commercial Tile Installation')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="commercialTile" [checked]="this.formData.contactMethods.includes('Commercial Tile Installation')" /> Commercial Tile
+          Installation
+        </li>
+        <li (click)="addKind('Tile Repair')" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="tileRepair" [checked]="this.formData.contactMethods.includes('Tile Repair')" /> Tile Repair
+        </li>
+      </ul>
+    </ul>
+    <ul class="list-checkbox item-checkbox">
+      <ul class="list-checkbox-item">
+        <p class="text-checkbox text-checkbox-item">
+          When are you planning your project Immediately?
+        </p>
+        <li (click)="this.formData.projectPlanning = 'Immediately' " class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="immediately" [checked]="this.formData.projectPlanning === 'Immediately' " /> Immediately
+        </li>
+        <li (click)="this.formData.projectPlanning = '3-6 months' "  class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="months3_6" [checked]="this.formData.projectPlanning === '3-6 months' "  /> 3-6 months
+        </li>
+        <li (click)="this.formData.projectPlanning = '6 months' " class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="months6" [checked]="this.formData.projectPlanning === '6 months' "  /> 6 months
+        </li>
+      </ul>
+      <ul class="list-checkbox-item">
+        <p class="text-checkbox text-checkbox-item">
+          Do you need in-home measurements?
+        </p>
+        <li (click)="this.formData.homeMeasurements = 'Yes'" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="yesInstallation" [checked]="this.formData.homeMeasurements === 'Yes'"  /> Yes Installation
+        </li>
+        <li (click)="this.formData.homeMeasurements = 'No'" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="no" [checked]="this.formData.homeMeasurements === 'No'"  /> No
+        </li>
+        <li (click)="this.formData.homeMeasurements = 'Not Sure Yet'" class="list-intup-checkbox">
+          <input class="input-checkbox" type="checkbox" name="notSureYet" [checked]="this.formData.homeMeasurements === 'Not Sure Yet'"  /> Not Sure Yet
+        </li>
+      </ul>
+    </ul>
+    <ul class="list-checkbox-item">
+      <p class="text-checkbox text-checkbox-item">
+        Which contact method do you prefer to use?
+      </p>
+      <li (click)="addMethod('Phone Call')"  class="list-intup-checkbox">
+        <input class="input-checkbox" type="checkbox" name="phoneCall" [checked]="this.formData.contactMethods.includes('Phone Call')" /> Phone Call Installation
+      </li>
+      <li (click)="addMethod('Text')" class="list-intup-checkbox">
+        <input class="input-checkbox" type="checkbox" name="text"  [checked]="this.formData.contactMethods.includes('Text')"  /> Text
+      </li>
+      <li (click)="addMethod('Email')"  class="list-intup-checkbox">
+        <input class="input-checkbox" [checked]="this.formData.contactMethods.includes('Email')" type="checkbox" name="emailCheck"   /> Email
+      </li>
+    </ul>
+    <ul class="list-input-form">
+      <li>
+        <input
+          class="input-text-form input-text"
+          type="text"
+          placeholder="When is the best time to contact you?"
+			 name="whenIsTheBestTimeToContactYou"
+			 [(ngModel)]="formData.contactTime" 
+        />
+      </li>
+      <li>
+        <input
+          class="input-text-form input-text"
+          type="text"
+          placeholder="How did you hear about us?"
+			 name="howDidYouHearAboutUs"
+			 [(ngModel)]="formData.hearAboutUs" 
+        />
+      </li>
+      <li>
+        <textarea
+          class="input-text-comment input-text"
+          placeholder="Tell us about your project"
+          autocomplete="off"
+			 name="tellUsAboutYourProject"
+			 [(ngModel)]="formData.projectDesc" 
+        ></textarea>
+      </li>
+      <li>
+        <button class="button-form-submit">SUBMIT</button>
+      </li>
+    </ul>
+  </div>
+</form>
+<footer class="footer-section">
+  <div class="footer">
+    <ul class="main-list-footer">
+      <li>
+        <ul class="footer-svg-icon-list-number-phone-email">
+          <svg class="footer-svg-icon" width="86" height="70">
+            <use href="../../../assets/svg/icon.svg#icon-logo"></use>
+          </svg>
+          <li class="info-footer-svg-icon">- title</li>
+          <li class="info-footer-svg-icon">- hardwood</li>
+          <li class="info-footer-svg-icon">- laminate</li>
+          <li class="info-footer-svg-icon">- remodel</li>
+          <p>
+            <a class="footer-phone" href="tel:+13607027163">+1360 702 7163</a>
+          </p>
+          <p>
+            <a class="footer-email" href="mailto:yanbuildinc@outlook.com"
+              >yanbuildinc@outlook.com</a
+            >
+          </p>
+        </ul>
+      </li>
+      <li>
+        <ul class="footer-navigation-list">
+          <h3 class="footer-title-navigation">Navigation</h3>
+          <li class="footer-info-navigation-title">Our Projects</li>
+          <li class="footer-info-navigation-title">Projects Library</li>
+          <li class="footer-info-navigation-title">Services We Provide</li>
+          <li class="footer-info-navigation-title">Why Choose Us</li>
+          <li class="footer-info-navigation-title">Reviews</li>
+          <button class="footer-btn-info-navigation-title">Get a Quote</button>
+        </ul>
+      </li>
+      <li>
+        <ul class="footer-list-our-services">
+          <h3 class="footer-title-list-our-services">YanBuild Serving</h3>
+          <li class="footer-info-list-our-services">
+            All of Denvers Metro area
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="footer-project-gallery-list-inst-yan">
+          <a
+            class="footer-project-gallery-list-inst-yan"
+            href="https://www.instagram.com/yanbuild/"
+            target="_blank"
+          >
+            <li class="footer-project-gallery-list-follow">Follow Us</li>
+            <li>
+              <svg
+                class="footer-project-gallery-list-yan"
+                width="20px"
+                height="20px"
+              >
+                <use href="../../../assets/svg/icon.svg#icon-inst-yan"></use>
+              </svg>
+            </li>
+            <li class="footer-project-gallery-list-yan-name">
+              <span class="bold-project-gallery-list-yan-name">yanbuild</span>
+            </li>
+          </a>
+        </ul>
+      </li>
+    </ul>
+
+    <button class="mobile-btn-footer">Get a Quote</button>
+
+    <div class="footer-block-text-button">
+      <p class="footer-info-text-revy">
+        Copyright © 2008-2023 YanBuild, LLC. All Rights Reserved
+      </p>
+      <button class="footer-info-button-revy">
+        <svg width="15px" height="20px">
+          <use href="../../../assets/svg/icon.svg#icon-arrow-sown-solid"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</footer>
