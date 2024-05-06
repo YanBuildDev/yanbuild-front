@@ -1,0 +1,18 @@
+<div id="bg"></div>
+
+<form  class="absolute" style="top:35%; left:40%">
+    <div *ngIf="!token;" class="form-field">
+      <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}"type="email" placeholder="Email" required/>
+    </div>
+    
+    <div *ngIf="!token;" class="form-field">
+      <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Password" required/>                         </div>
+    
+    <div *ngIf="!token;" class="form-field">
+      <button (click)="login()" class="btn" type="submit">Log in</button>
+    </div>
+
+    <div *ngIf="token;" class="bg-black opacity-70 py-5 p-3 text-center">
+        <span class="opacity-100 text-white text-xl">Thanks For Login</span>
+    </div>
+</form>

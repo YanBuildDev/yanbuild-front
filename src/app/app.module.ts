@@ -29,8 +29,11 @@ import { routes } from './app.routes';
 import { AdminService } from './services/admin.service';
 import { ApiService } from './services/api.service';
 import { OrderService } from './services/orders.service';
+import { OrdersListComponent } from './components/orders-list/orders-list.component';
+import { AdminLoginComponent } from './components/admin-login/admin-login.component';
+import { AuthGuard } from './auth.guard';
 @NgModule({
-  declarations: [AppComponent, MainComponent, QuoteFormComponent],
+  declarations: [AppComponent, MainComponent, QuoteFormComponent, OrdersListComponent, AdminLoginComponent],
 
   imports: [
     RouterModule,
@@ -48,7 +51,7 @@ import { OrderService } from './services/orders.service';
     NgxPopperjsModule,
     MaskitoDirective
   ],
-  providers: [ provideRouter(routes), ApiService, AdminService, OrderService],
+  providers: [ provideRouter(routes), ApiService, AdminService, OrderService, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

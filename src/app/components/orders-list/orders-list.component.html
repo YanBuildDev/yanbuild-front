@@ -1,0 +1,67 @@
+<div class="order-list">
+  <div class="order-item" *ngFor="let order of orders">
+    <div class="order-number">Order #{{ order.orderNumber }}</div>
+    <div class="order-details">
+      <div class="order-field">
+        <span class="order-field-label">First Name:</span>
+        <span class="order-field-value">{{ order.firstName }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Last Name:</span>
+        <span class="order-field-value">{{ order.lastName }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Phone:</span>
+        <span class="order-field-value">{{ order.phone }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Email:</span>
+        <span class="order-field-value">{{ order.email }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Zip:</span>
+        <span class="order-field-value">{{ order.zip }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">City:</span>
+        <span class="order-field-value">{{ order.city }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">State:</span>
+        <span class="order-field-value">{{ order.state }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Company Name:</span>
+        <span class="order-field-value">{{ order.companyName }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Project Kind:</span>
+        <span class="order-field-value">{{ order.projectKind.join(', ') }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Project Planning:</span>
+        <span class="order-field-value">{{ order.projectPlanning }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Home Measurements:</span>
+        <span class="order-field-value">{{ order.homeMeasurements }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Contact Methods:</span>
+        <span class="order-field-value">{{ order.contactMethods.join(', ') }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Contact Time:</span>
+        <span class="order-field-value">{{ order.contactTime }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Hear About Us:</span>
+        <span class="order-field-value">{{ order.hearAboutUs }}</span>
+      </div>
+      <div class="order-field">
+        <span class="order-field-label">Project Description:</span>
+        <span class="order-field-value">{{ order.projectDesc }}</span>
+      </div>
+    </div>
+  </div>
+</div>

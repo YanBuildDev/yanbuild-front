@@ -1,0 +1,37 @@
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-number {
+  font-weight: bold;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.order-field {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.order-field-label {
+  font-weight: bold;
+}
+
+.order-field-value {
+  flex-grow: 1;
+}
