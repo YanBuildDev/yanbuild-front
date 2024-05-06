@@ -1,35 +1,35 @@
 <h2 class="title-form">GET A FREE QUOTE</h2>
 
-<form action="" class="form">
+<form (ngSubmit)="onSubmit()" action="" class="form">
   <div class="form-container">
     <p class="text-form">Please Fill out this form to get started.</p>
     <ul class="list-form">
       <ul class="list-form-item">
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="First Name" />
+          <input class="input-form" type="text" placeholder="First Name" name="firstName" [(ngModel)]="formData.firstName" />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Phone Number" />
+          <input class="input-form" type="text" placeholder="Phone Number" name="phoneNumber" [(ngModel)]="formData.phoneNumber"  />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Zip Code" />
+          <input class="input-form" type="text" placeholder="Zip Code" name="zipCode" [(ngModel)]="formData.zipCode"  />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="State" />
+          <input class="input-form" type="text" placeholder="State" name="state" [(ngModel)]="formData.state"  />
         </li>
       </ul>
       <ul class="list-form-item">
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Lats Name" />
+          <input class="input-form" type="text" placeholder="Lats Name" name="latsName" [(ngModel)]="formData.latsName"  />
         </li>
         <li class="input-list">
-          <input class="input-form" type="email" placeholder="Email" />
+          <input class="input-form" type="email" placeholder="Email" name="email" [(ngModel)]="formData.email"  />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="City" />
+          <input class="input-form" type="text" placeholder="City" name="city" [(ngModel)]="formData.city"  />
         </li>
         <li class="input-list">
-          <input class="input-form" type="text" placeholder="Company Name" />
+          <input class="input-form" type="text" placeholder="Company Name" name="companyName" [(ngModel)]="formData.companyName"  />
         </li>
       </ul>
     </ul>
@@ -37,23 +37,23 @@
     <ul class="list-checkbox first-checkebox">
       <ul class="list-checkbox-item">
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Residential Tile
+          <input class="input-checkbox" type="checkbox" name="residentialTile" [(ngModel)]="formData.residentialTile"  /> Residential Tile
           Installation
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Shower Pan Work
+          <input class="input-checkbox" type="checkbox" name="showerPanWork" [(ngModel)]="formData.showerPanWork"  /> Shower Pan Work
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" />Floor leveling
+          <input class="input-checkbox" type="checkbox" name="floorLeveling" [(ngModel)]="formData.floorLeveling"  /> Floor leveling
         </li>
       </ul>
       <ul class="list-checkbox-item">
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Commercial Tile
+          <input class="input-checkbox" type="checkbox" name="commercialTile" [(ngModel)]="formData.commercialTile"  /> Commercial Tile
           Installation
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Tile Repair
+          <input class="input-checkbox" type="checkbox" name="tileRepair" [(ngModel)]="formData.tileRepair"  /> Tile Repair
         </li>
       </ul>
     </ul>
@@ -63,13 +63,13 @@
           When are you planning your project Immediately?
         </p>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Immediately
+          <input class="input-checkbox" type="checkbox" name="immediately" [(ngModel)]="formData.immediately"  /> Immediately
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> 3-6 months
+          <input class="input-checkbox" type="checkbox" name="months3_6" [(ngModel)]="formData.months3_6"  /> 3-6 months
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> 6 months
+          <input class="input-checkbox" type="checkbox" name="months6" [(ngModel)]="formData.months6"  /> 6 months
         </li>
       </ul>
       <ul class="list-checkbox-item">
@@ -77,13 +77,13 @@
           Do you need in-home measurements?
         </p>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Yes Installation
+          <input class="input-checkbox" type="checkbox" name="yesInstallation" [(ngModel)]="formData.yesInstallation"  /> Yes Installation
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> No
+          <input class="input-checkbox" type="checkbox" name="no" [(ngModel)]="formData.no"  /> No
         </li>
         <li class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" /> Not Sure Yet
+          <input class="input-checkbox" type="checkbox" name="notSureYet" [(ngModel)]="formData.notSureYet"  /> Not Sure Yet
         </li>
       </ul>
     </ul>
@@ -92,13 +92,13 @@
         Which contact method do you prefer to use?
       </p>
       <li class="list-intup-checkbox">
-        <input class="input-checkbox" type="checkbox" /> Phone Call Installation
+        <input class="input-checkbox" type="checkbox" name="phoneCall" [(ngModel)]="formData.phoneCall"  /> Phone Call Installation
       </li>
       <li class="list-intup-checkbox">
-        <input class="input-checkbox" type="checkbox" /> Text
+        <input class="input-checkbox" type="checkbox" name="text" [(ngModel)]="formData.text"  /> Text
       </li>
       <li class="list-intup-checkbox">
-        <input class="input-checkbox" type="checkbox" /> Email
+        <input class="input-checkbox" type="checkbox" name="emailCheck" [(ngModel)]="formData.emailCheck"  /> Email
       </li>
     </ul>
     <ul class="list-input-form">
@@ -107,6 +107,8 @@
           class="input-text-form input-text"
           type="text"
           placeholder="When is the best time to contact you?"
+			 name="whenIsTheBestTimeToContactYou"
+			 [(ngModel)]="formData.whenIsTheBestTimeToContactYou" 
         />
       </li>
       <li>
@@ -114,6 +116,8 @@
           class="input-text-form input-text"
           type="text"
           placeholder="How did you hear about us?"
+			 name="howDidYouHearAboutUs"
+			 [(ngModel)]="formData.howDidYouHearAboutUs" 
         />
       </li>
       <li>
@@ -121,6 +125,8 @@
           class="input-text-comment input-text"
           placeholder="Tell us about your project"
           autocomplete="off"
+			 name="tellUsAboutYourProject"
+			 [(ngModel)]="formData.tellUsAboutYourProject" 
         ></textarea>
       </li>
       <li>
