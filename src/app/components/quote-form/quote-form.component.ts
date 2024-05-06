@@ -58,7 +58,7 @@ export class QuoteFormComponent {
      console.log('Text:', this.formData.text);
      console.log('Email check:', this.formData.emailCheck);
      console.log('When is the best time to contact you:', this.formData.whenIsTheBestTimeToContactYou);
-     console.log('How did you hear about us?:', this.formData.howDidYouHearAboutUs);
+     console.log('How did you hear about us:', this.formData.howDidYouHearAboutUs);
      console.log('Tell us about your project:', this.formData.tellUsAboutYourProject);
 
      this.formData.firstName = '';
