@@ -365,6 +365,7 @@ body {
 /* HERO */
 
 .hero {
+  width: 100%;
   height: 100%;
   background: url("../../../assets/image/man.png") lightgray 100% / cover
     no-repeat fixed;
@@ -560,6 +561,11 @@ body {
     padding: 0;
   }
   .section-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
     margin: 0 auto;
     height: 100%;
   }
@@ -578,7 +584,6 @@ body {
   }
   .footer-hero {
     padding: 0 8px;
-    margin-top: 60px;
     height: 117px;
   }
   .list-hero {
@@ -1341,7 +1346,6 @@ body {
     display: flex;
   }
   .services-we-provide {
-    padding: 0 16px;
     justify-content: start;
     align-items: start;
   }
