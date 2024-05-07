@@ -62,12 +62,17 @@ line-height: normal;
 }
 .list-form {
    display: flex;
+   flex-direction: column;
    gap: 24px;
+}
+
+.list-form-item-block {
+  display: flex;
+  flex-direction: column;
 }
 
 .list-form-item {
    display: flex;
-   flex-direction: column;
    gap: 20px;
 }
 
@@ -212,6 +217,10 @@ background: color(display-p3 0.9373 0.5412 0.1294);
       flex-direction: column;
       align-items: start;
    }
+   .list-form-item {
+    display: flex;
+    flex-direction: column;
+   }
    .list-checkbox {
       flex-direction: column;
       gap: 20px;
@@ -235,8 +244,11 @@ background: color(display-p3 0.9373 0.5412 0.1294);
       font-size: 38px;
       margin-top: 20px;
    }
+   .list-form-item {
+    flex-direction: column;
+   }
    .text-form {
-
+    
       margin-top: 30px;
    }
    .list-form {
@@ -268,6 +280,9 @@ background: color(display-p3 0.9373 0.5412 0.1294);
    .title-form {
       font-size: 30px;
       margin-top: 20px;
+   }
+   .list-form-item {
+    flex-direction: column;
    }
    .text-form {
       margin-top: 30px;
