@@ -20,4 +20,14 @@ export class OrdersListComponent implements OnInit{
     })
   }
 
+  deleteOrder(order) : void {
+    if(confirm('Are You Sure?')){
+      this.orderService.deleteById(order._id).subscribe(res => {
+        if(res?.data?.success){
+          this.orders = this.orders.filter(o=>o._id !== order._id)
+        }
+      })
+    }
+  }
+
 }

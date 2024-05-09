@@ -1,6 +1,9 @@
 <div class="order-list">
   <div class="order-item" *ngFor="let order of orders">
-    <div class="order-number">Order #{{ order.orderNumber }}</div>
+    <div class="order-number">
+      <span>Order #{{ order.orderNumber }}</span>
+      <button (click)="deleteOrder(order)" style="border: 1px solid black; border-radius: 5px; padding: 5px;">Delete</button>
+    </div>
     <div class="order-details">
       <div class="order-field">
         <span class="order-field-label">First Name:</span>

@@ -15,6 +15,9 @@
 
 .order-number {
   font-weight: bold;
+  font-size: larger;
+  display: flex;
+  justify-content: space-between;
 }
 
 .order-details {

@@ -20,7 +20,7 @@ export class AdminLoginComponent  implements  OnInit{
   constructor(private adminService:AdminService, private router: Router,){}
 
   login(){
-    this.adminService.login({email:this.email, password: this.password}).subscribe((data:any)=>{
+    this.adminService.login({email:this.email?.toLocaleLowerCase()?.trim(), password: this.password?.trim()}).subscribe((data:any)=>{
       if(data?.data?.accessToken){
         this.router.navigate(['orders'])
       }
