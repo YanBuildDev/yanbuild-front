@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 #bg {
-  background-image: url('../../../assets/main.jpg');
   background-size: 300px;
   background-repeat: repeat;
   position: fixed;
