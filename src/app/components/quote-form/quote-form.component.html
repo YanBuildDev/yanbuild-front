@@ -61,30 +61,7 @@
       </ul>
     </ul>
     </div>
-    <p class="text-checkbox" [ngClass]="{'invalid': invalidKeys['firstName']}">What kind of project is this?</p>
-    <ul class="list-checkbox first-checkebox">
-      <ul class="list-checkbox-item">
-        <li (click)="addKind('Residential Tile Installation')" class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="residentialTile" [checked]="this.formData.contactMethods.includes('Residential Tile Installation')"  /> Residential Tile
-          Installation
-        </li>
-        <li (click)="addKind('Shower Pan Work')" class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="showerPanWork" [checked]="this.formData.contactMethods.includes('Shower Pan Work')" /> Shower Pan Work
-        </li>
-        <li (click)="addKind('Floor leveling')" class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="floorLeveling" [checked]="this.formData.contactMethods.includes('Floor leveling')" /> Floor leveling
-        </li>
-      </ul>
-      <ul class="list-checkbox-item">
-        <li (click)="addKind('Commercial Tile Installation')" class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="commercialTile" [checked]="this.formData.contactMethods.includes('Commercial Tile Installation')" /> Commercial Tile
-          Installation
-        </li>
-        <li (click)="addKind('Tile Repair')" class="list-intup-checkbox">
-          <input class="input-checkbox" type="checkbox" name="tileRepair" [checked]="this.formData.contactMethods.includes('Tile Repair')" /> Tile Repair
-        </li>
-      </ul>
-    </ul>
+    
     <ul class="list-checkbox item-checkbox">
       <ul class="list-checkbox-item">
         <p class="text-checkbox text-checkbox-item" [ngClass]="{'invalid': invalidKeys['projectPlanning']}">
