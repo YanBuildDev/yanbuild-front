@@ -1,23 +1,32 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent {
+export class MainComponent implements OnInit{
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.checkScreenSize();
+  }
 title = 'app';
   isMobile: boolean;
   isOpen: boolean = false;
+
+  isAdmin = false
 
   constructor() {
     this.checkScreenSize();
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.checkScreenSize();
+  ngOnInit() {
+    // Sorry developer for this
+    if(localStorage.getItem('jwt')){
+      this.isAdmin = true
+    }
   }
+
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event) {
