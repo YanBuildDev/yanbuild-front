@@ -108,6 +108,7 @@ body {
 
 .header-item {
   display: flex;
+  align-items: center;
 }
 
 .header-svg-icon {
@@ -329,7 +330,7 @@ body {
 
 @media screen and (min-width: 320px) and (max-width: 392px) {
   .header {
-    height: 74px;
+    /* height: 74px; */
   }
   .burger-menu {
     display: flex;
