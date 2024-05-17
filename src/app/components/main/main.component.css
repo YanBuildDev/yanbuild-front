@@ -126,12 +126,8 @@ body {
   gap: 40px;
 }
 
-.list-address {
-  display: flex;
-}
-
 .btn-header {
-  margin-right: 164px;
+  margin-right: 80px;
   display: flex;
   padding: 10px 35px;
   justify-content: center;
@@ -155,7 +151,8 @@ body {
 }
 
 .list-address {
-  gap: 40px;
+  gap: 20px;
+  display: flex;
   align-items: center;
 }
 
@@ -213,7 +210,7 @@ body {
 
 @media screen and (min-width: 1600px) and (max-width: 1845px) {
   .btn-header {
-    margin-right: 76px;
+    margin-right: 56px;
   }
   .link-item {
     font-size: 14px;
@@ -222,7 +219,7 @@ body {
     font-size: 14px;
   }
   .list {
-    gap: 30px;
+    gap: 20px;
   }
 }
 
@@ -247,8 +244,16 @@ body {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 12px;
-    margin-right: 36px;
+    gap: 4px;
+    margin-right: 10px;
+  }
+
+  .address-link {
+    font-size: 12px;
+  }
+
+  .address-svf-icon {
+    width: 16px;
   }
 
   .btn-address {
@@ -315,12 +320,15 @@ body {
     width: 62px;
     height: 43px;
   }
+  .address-svf-icon {
+    width: 16px;
+  }
   .btn-address {
     display: none;
   }
   .list-address {
     align-items: start;
-    gap: 10px;
+    gap: 8px;
     margin-right: 60px;
   }
   .header-svg-icon {
@@ -350,13 +358,16 @@ body {
     width: 62px;
     height: 43px;
   }
+  .address-svf-icon {
+    width: 16px;
+  }
   .btn-address {
     display: none;
   }
   .list-address {
     align-items: start;
     margin-right: 26px;
-    gap: 10px;
+    gap: 8px;
   }
   .header-svg-icon {
     margin-right: 26px;
@@ -369,7 +380,7 @@ body {
   width: 100%;
   height: 100%;
   background: url("../../../assets/image/man.png") lightgray 50% / cover
-    no-repeat ;
+    no-repeat;
 }
 
 .hero-text {
@@ -1376,6 +1387,7 @@ body {
   .services-we-provide-list-svg-icon {
     flex-direction: column;
     gap: 60px;
+    align-items: start;
   }
   .text-list-svg-icon {
     margin-left: 0;
@@ -1435,6 +1447,8 @@ body {
   .services-we-provide-list-svg-icon {
     flex-direction: column;
     gap: 60px;
+    align-items: start;
+    justify-content: center;
   }
   .list-svg-icon {
     gap: 0px;
